@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thi Kết Thúc Thực Hành</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.0.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/ThiKTTH.js"></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        nav ul{
+            margin-left: 50px;
+             padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="col-xs-12">
+        <img src="../Images/logo.PNG" alt="" width="100%" height="200px">
+        </div>
+        <div class="row">
+                <nav class="navbar navbar-expand-md col-md-12" style="background-color: aquamarine;">
+                        <ul class="navbar navbar-nav">
+                            <li><a href="#">TRANG CHỦ</a></li>
+                            <li><a href="#">ĐOÀN THỂ</a></li>
+                            <li><a href="#">SỰ KIỆN</a></li>
+                            <li class="dropdown">
+                                <a  class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    HOẠT ĐỘNG
+                                    <span class="caret"></span>
+                                </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"  id="btnDK">ĐĂNG KÝ</a></li>
+                                        <li><a href="#">THAM GIA</a></li>
+                                    </ul>
+                            </li>
+                        </ul>
+                </nav>
+                <div class="col-md-8">
+                    <img src="../Images/ngayhoithanhnien.JPG" class="rounded-circle" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h2 style="text-align: center;color:brown;">TIN NỔI BẬT</h2>
+                    <ol type="I" style="background-color: aquamarine;">  
+                        <li>Mùa hè xanh</li>  
+                        <li>Thanh niên tình nguyện</li>  
+                        <li>Tấm lòng vàng</li>  
+                        <li>Hiếm máu nhân đạo</li>  
+                        <li>Bảo vệ môi trường xanh</li>  
+                        <li>Thi đua lập thành tích 26/3</li>  
+                       </ol>  
+                </div>
+        </div>
+        <div class="col-xs-12">
+            <h4 style="text-align: center;color: brown;">DANH SÁCH ĐĂNG KÝ HOẠT ĐỘNG MÙA HÈ XANH</h4>
+            <table class="table table-striped" role="table" id="danhSach">
+                <tr>
+                  <th>STT</th>
+                  <th>Mã SV</th>
+                  <th>Tên SV</th>
+                  <th>Ngày tham gia</th>
+                  <th>Email</th>
+                  <th> Số Điện Thoại</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <div class="col-xs-12">
+            <p style="text-align: right;background-color: blue; color:white;">
+                @2020-2021 Đoàn thanh niên-Trường Đại Học Công Nghiệp Thành Phố Hồ Chí Minh
+            </p>
+        </div>
+    </footer>
+    <div class="modal fade" role="dialog" id="myModal">
+        <div class="modal-dialog" style="margin-top: 10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-left" style="color: red;">THÔNG TIN ĐĂNG KÝ </h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal" style="margin-top: 10px;">
+                        <label for="Ma" class="control-label col-xs-3">Mã sv:</label>
+                        <div class="col-xs-9">
+                            <input type="text"  id="Ma" class="form-control" placeholder="Mã sinh viên">
+                            <span class="text-danger" id="tbMa">*</span>
+                        </div>
+                        <label for="Ten" class="control-label col-xs-3">Họ Tên:</label>
+                        <div class="col-xs-9" style="margin-bottom: 10px;">
+                            <input type="text"  id="Ten" class="form-control" placeholder="Họ Tên">
+                            <span class="text-danger" style="color: red;" id="tbTen">*</span>
+                        </div>
+                        <label for="Ngay" class="control-label col-xs-3">Ngày tham gia:</label>
+                            <div class="col-md-9">
+                                <input type="date" class="form-control" id="Ngay">
+                                <span id="tbNgay" class="text-danger">*</span>
+                        <label for="Email" class="control-label col-xs-3">Email:</label>
+                        <div class="col-xs-9">
+                            <input type="text"  id="Email" class="form-control" placeholder="Địa chỉ email">
+                            <span class="text-danger" style="color: red;" id="tbEmail">*</span>
+                        </div>
+                        <label for="SDT" class="control-label col-xs-3">Số Điện Thoại:</label>
+                        <div class="col-xs-9">
+                            <input type="text"  id="SDT" class="form-control" placeholder="Số điện thoại">
+                            <span class="text-danger" style="color: red;" id="tbSDT">*</span>
+                        </div>
+                        <button class="btn btn-sucess btn-group-justified" id="Save"  type="button" style="color: white;background-color:red;width: 100%;">Lưu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
